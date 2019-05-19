@@ -15,31 +15,70 @@ if(isset($_POST["upload"])){
     $oddelovac = $_POST["oddel"];
     $skrok=$_POST["rok"];
     $sub=$_POST["predmet"];
-    $filename=$_FILES["file"]["tmp_name"];    
+    $filename=$_FILES["file"]["tmp_name"];   
+    
+    $sql = "INSERT INTO subjects (subject_name,years) 
+    VALUES ( '$sub', '$skrok')";
+    if ($conn->query($sql) === TRUE /*&&
+    $conn->query($sql2) === TRUE */) {
+    echo "Udaje boli uspesne nahrane.<br>";
+    //header( "refresh:5;url=index.php" );
+    } else {
+    echo 'tabulka subjects'.$conn->error;
+    } 
+
      if($_FILES["file"]["size"] > 0)
      {
         $file = fopen($filename, "r");
           while (($getData = fgetcsv($file, 10000, $oddelovac)) !== FALSE)
-           {
-            $body=$getData[0];
-             $sql = "INSERT INTO Tim (years,subjects,points,confirm) 
-                   VALUES ('$skrok', '$sub','".$getData[0]."', NULL)";
+           {   
+            $sql1 = "INSERT INTO student (name,email,password,ais_id) 
+            VALUES ('".$getData[1]."', '".$getData[2]."','".$getData[3]."','".$getData[0]."')";
+
+
+            if ($conn->query($sql1) === TRUE ) {
+                echo "Udaje boli uspesne nahrane.<br>";
+                //header( "refresh:5;url=index.php" );
+            } else {
+                echo 'tabulka clen'.$conn->error;
+            }
+
+            $tmpsql ="SELECT t.numberTeam,s.subject_name  FROM teams t
+            join subjects s on t.subject_id=s.id_subject WHERE t.numberTeam ='".$getData[4]."' 
+            AND s.subject_name='".$sub."'";
+            $result=$conn->query($tmpsql);
+            if ($result->num_rows == 0) {
+
+                $sql2 = "INSERT INTO teams (numberTeam, subject_id, pointsTeam, confirmAdmin) 
+                VALUES ('".$getData[4]."', (SELECT MAX(id_subject) FROM subjects),NULL,  NULL)";
+
+            if ($conn->query($sql2) === TRUE) {
+                echo "Udaje boli uspesne nahrane.<br>";
+                //header( "refresh:5;url=index.php" );
+            } else {
+                echo 'tabulka teams.'.$conn->error;
+            }
+          }
+            $sql3 = "INSERT INTO studentTeam (student_id,team_id, pointsStudent,confirmStudent) 
+            VALUES ( (SELECT MAX(id_student) FROM student),(SELECT MAX(id_team) FROM teams),NULL, NULL)";
                   
-                  if ($conn->query($sql) === TRUE /*&& $conn->query($sq3) === TRUE &&
-                   $conn->query($sql2) === TRUE */) {
+                  if ($conn->query($sql3) === TRUE) {
                     echo "Udaje boli uspesne nahrane.<br>";
                     //header( "refresh:5;url=index.php" );
                 } else {
-                    echo 'Pocas pridavania udajov sa vyskytla chyba.'.$conn->error;
+                    echo 'tabulka clenTeam'.$conn->error;
                 }
 
            }
-      
+
+
            fclose($file);  
      }
+     $conn->close();
+    // header( "refresh:1;url=uploadPoints.php" );
   }   
 
-  $conn->close();
+  
 
 ?>
 
