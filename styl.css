@@ -1,0 +1,48 @@
+
+table {
+	position: relative;
+    border-collapse: collapse;
+    width: 80%;
+	left: 10%;
+	top: 100px;
+	border: 2px solid black;
+}
+
+td {
+	font-family: freeserif;
+	padding: 4px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+th {
+	background-color: lightblue;
+	color: black;
+	border: 1px solid black;
+	align: center;
+	horiz-align: center;
+	padding: 4px;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+td.tabulka:hover {
+	background-color: #ddd;
+}
+
+td.prvy, th.prvy {
+	border-right: solid 1px black;
+	text-align: center;
+}
+
+td#blue {
+	background-color: #f2f2f2;
+}
+
+
+
+
+
+
