@@ -56,4 +56,43 @@ body{
   min-height: 100vh;
   margin-left: 20vw;
 }
+
+@media print{
+  #menu{
+    display: none
+  }
+  #content{
+    width: 100vw;
+    min-height: 100vh;
+    margin-left: 0vw;
+  }
+}
+
+@media #{$tablet}{
+  #menu{
+    width: 100%;
+    height: fit-content;
+    position: initial;
+  }
+  #content{
+    width: 100vw;
+    min-height: 100vh;
+    margin-left: 0vw;
+  }
+
+}
+@media #{$phone}{
+  #menu{
+    width: 100%;
+    height: fit-content;
+    position: initial;
+  }
+  #content{
+    width: 100vw;
+    min-height: 100vh;
+    margin-left: 0vw;
+  }
+
+}
+
 </style>

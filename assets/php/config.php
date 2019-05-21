@@ -27,7 +27,7 @@ function dbConnect(){
         return false;
     }
 }
-function dbConnect($db_name){
+function dbConnect_s($db_name){
     global $servername;
     global $username;
     global $password;

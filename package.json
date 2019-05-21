@@ -1,12 +1,12 @@
 {
-    "name": "project19",
+    "name": "webtech2",
     "version": "1.0.0",
-    "description": "Finálny projekt na predmet WEBTECH1, FEI STU API",
+    "description": "Finálny projekt na predmet WEBTECH2, FEI STU API",
     "main": "index.js",
     "scripts": {
         "start": "npx parcel ./index.html"
     },
-    "author": "Lukáš Odler, Ondrej Straka, Jakub Lazúr",
+    "author": "",
     "license": "MIIT",
     "dependencies": {
         "axios": "^0.18.0",
@@ -23,14 +23,9 @@
         "vue2-breadcrumbs": "^2.0.0"
     },
     "devDependencies": {
-        "@vue/component-compiler-utils": "^2.3.1",
-        "babel-core": "^6.26.3",
-        "babel-preset-env": "^1.7.0",
-        "node-sass": "^4.12.0",
-        "parcel-bundler": "^1.9.7",
-        "parcel-plugin-asset-copier": "^1.0.0",
-        "sass": "^1.15.2",
+        "@vue/component-compiler-utils": "^3.0.0",
+        "parcel-bundler": "^1.12.3",
+        "sass": "^1.20.1",
         "vue-template-compiler": "^2.6.10"
-    },
-    "assetsPath": "src/static/"
+    }
 }

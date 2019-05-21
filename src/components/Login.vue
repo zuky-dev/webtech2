@@ -16,12 +16,13 @@ import axios from 'axios';
 export default {
   methods: {
     'login': function(e){
-        console.log('http://147.175.121.210:8166/team/api/login/' + this.acc + '/' + this.pswd);
-        axios.get('http://147.175.121.210:8166/team/api/login/' + this.acc + '/' + this.pswd).then(response => {
+        axios.get('http://147.175.121.210:8166/api/login/' + this.acc + '/' + this.pswd).then(response => {
             console.log(response.data);
             let data = response.data;
             if(data.conn){
                 $cookies.set('id', data.id);
+                $cookies.set('id', data.iddb);
+                $cookies.set('admin', data.admin);
                 $cookies.set('name', data.name);
                 $cookies.set('surname', data.surname);
 
@@ -49,6 +50,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../scss/responsive.scss';
 
 h1{
     margin: 1rem;
@@ -95,6 +97,22 @@ button{
     align-items: center;
     flex-direction: column;
     background: #eaeaea;
+}
+@media #{$tablet}{
+  #main{
+    width: 80%;
+    height: 80vh !important;
+    min-height: 80vh !important;
+    margin: 10vh 10%;
+  }
+}
+@media #{$phone}{
+  #main{
+    width: 100%;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0;
+  }
 }
 
 #flags{

@@ -1,4 +1,4 @@
-const defPath = '/'; // '/team/';
+const defPath = '/';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -48,7 +48,7 @@ const routes = [
     }
   },
   {
-    path: defPath + '/e3',
+    path: defPath + 'e3',
     component: E3,
     name: 'Uloha3',
     meta: {
@@ -63,7 +63,7 @@ $cookies.config('30d');
 
 const router = new VueRouter({
   routes,
-  mode: 'history',
+  mode: 'history'
 });
 
 new Vue({

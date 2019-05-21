@@ -36,6 +36,8 @@ export default {
       $cookies.remove('id');
       $cookies.remove('name');
       $cookies.remove('surname');
+      $cookies.remove('iddb');
+      $cookies.remove('admin');
       location.reload();
     },
     change: function(lang){
