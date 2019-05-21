@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "p";
 $password = "webtech2";
-$dbname = "UlohaAdmin";
+$dbname = "Uloha3";
 $conn;
 $stmt;
 $result;
@@ -19,22 +19,6 @@ function dbConnect(){
     global $conn;
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return true;
-    }catch(PDOException $e) {
-        $error = $e->getMessage();
-        return false;
-    }
-}
-function dbConnect($db_name){
-    global $servername;
-    global $username;
-    global $password;
-    global $error;
-    global $conn;
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$db_name", $username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return true;

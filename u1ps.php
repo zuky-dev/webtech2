@@ -21,6 +21,7 @@ ini_set('display_errors', 1);
     <body>
     <div class="container">
      <?php   
+
      function subjectInfo($idStudent){
         include 'config.php';
         $str = "";
@@ -86,7 +87,11 @@ ini_set('display_errors', 1);
       }
      ?>
     
+      <?php
 
+        subjectInfo($_GET['id']);
+
+      ?>
     </div>
      </body>
 </html>

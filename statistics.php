@@ -34,7 +34,7 @@ ini_set('display_errors', 1);
                     <th>Počet študentov</th>
                     <th>Počet súhlasiacich študentov</th>
                     <th>Počet nesúhlasiacich študentov</th>
-                    <th>Počet nevyjadrenych</th>
+                    <th>Počet nevyjadrených študentov</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -91,7 +91,7 @@ ini_set('display_errors', 1);
          echo "<script> 
               var data = [{
               values: [".$sum." , ".$agree." , ".$disagree.", ".$not."],
-              labels: ['Počet študentov', 'Počet súhlasiacich študentov', 'Počet nesúhlasiacich študentov','Počet vyjadrení'],
+              labels: ['Počet študentov', 'Počet súhlasiacich študentov', 'Počet nesúhlasiacich študentov','Počet nevyjadrených študentov'],
               type: 'pie'
               }];
   
@@ -107,7 +107,7 @@ ini_set('display_errors', 1);
                     <th>Počet tímov</th>
                     <th>Počet uzavretých tímov</th>
                     <th>Počet tímov na vyjadrenie</th>
-                    <th>Počet s nevyjadrenými</th>
+                    <th>Počet tímov s nevyjadrenými študentmi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -131,11 +131,11 @@ ini_set('display_errors', 1);
                         if($row['id_team']!=NULL){
                            $team++;
                          }
-                         if($row['confirmAdmin']==true){
-                           $confAdmin++;
-                         }
                          if($row['confirmAdmin']==NULL){
-                            $not++;
+                           $not++;
+                         }
+                         elseif($row['confirmAdmin']==1 || $row['confirmAdmin']==0){
+                            $confAdmin++;
                           }
 
                           $sql2 ="SELECT  t.id_team, t.confirmAdmin, st.confirmStudent FROM student AS s 
@@ -180,7 +180,7 @@ ini_set('display_errors', 1);
     echo "<script> 
            var data = [{
            values: [".$team." , ".$confAdmin." , ".$not.", ".$nstudent."],
-           labels: ['Počet tímov', 'Počet uzavretých tímov', 'Počet tímov na vyjadrenie','Počet s nevyjadrenými'],
+           labels: ['Počet tímov', 'Počet uzavretých tímov', 'Počet tímov na vyjadrenie','Počet tímov s nevyjadrenými študentmi'],
            type: 'pie'
          }];
   
