@@ -1,4 +1,4 @@
-const defPath = '/';
+const defPath = '/'; // '/team/';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
