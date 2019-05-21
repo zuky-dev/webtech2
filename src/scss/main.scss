@@ -1,0 +1,27 @@
+@import url("~node_modules/font-awesome/css/font-awesome.min.css");
+@import url("~src/scss/webcss.css");
+@import url("~src/scss/fonts.scss");
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: inherit;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-scrollbar{
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+}
+::-scrollbar-track,::-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.7);
+}
+::-webkit-scrollbar{width: 12px;height: 12px;}::-webkit-scrollbar-track,::-webkit-scrollbar-thumb{background: rgba(0, 0, 0, 0.7);}::-moz-scrollbar{width: 12px;height: 12px;}::-moz-scrollbar-track,::-moz-scrollbar-thumb{background: rgba(0, 0, 0, 0.7);}::-o-scrollbar{width: 12px;height: 12px;}::-o-scrollbar-track,::-o-scrollbar-thumb{background: rgba(0, 0, 0, 0.7);}
