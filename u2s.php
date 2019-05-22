@@ -1,7 +1,7 @@
 <?php
 
-include_once ('config.php');
-$id=intval($_COOKIE['iddb']);
+include_once ('config2.php');
+$id=intval($_GET['id']);
 
 //$id=139;
 

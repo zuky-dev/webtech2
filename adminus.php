@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php/*
+$cookie_name = "user";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day*/
+?>
 <html>
     <head>
         <title>TAB</title>
@@ -11,17 +16,7 @@
 
     <body>
 
-    <?php
     
-    if(isset($_COOKIE[$cookie_name]) && $_COOKIE[$cookie_name] == true) {
-        echo $_COOKIE[$cookie_name];
-    } else {
-
-        header("Location: http://147.175.121.210:8065/zadanie10/chyba.php");
-
-    }
-    ?>
-
         <div id="wrap">
             <div class="container">
                 <div class="row">
