@@ -1,5 +1,5 @@
 <?php
-include_once ('config.php');
+include_once ('config2.php');
 
 // Create connection
 $conn = new mysqli($server, $username, $password, $db);
@@ -101,7 +101,7 @@ if(isset($_POST["upload"])){
 &nbsp;
 <div class="card bg-light">
 <div class="card-body">
-<form class="form-horizontal" method="post" enctype="multipart/form-data" action="admin.php">
+<form class="form-horizontal" method="post" enctype="multipart/form-data" action="adminSilvia.php">
   <div class="form-group">
     <label class="control-label col-sm-2" >Školský rok:</label>
     <div class="col-sm-10">

@@ -41,7 +41,7 @@ ini_set('display_errors', 1);
                 <tr>
                 <?php
                      
-                    include 'config.php';
+                    include 'config2.php';
                     // fetch the data
                     $conn = new mysqli($server, $username, $password, $db) or die("Connection failed: " . $conn->connect_error);     
                     mysqli_set_charset($conn,"utf8");
