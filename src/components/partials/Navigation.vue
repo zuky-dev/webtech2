@@ -17,7 +17,7 @@ export default {
     computed:{
         availableLinks: function() {
             return this.node.filter(function(u) {
-                let res = u.meta.users == 'all' ? true : (u.meta.users == cToText($cookies.get('admin')) ? true : false);
+                let res = u.meta.users == 'all' ? true : (u.meta.users == $cookies.get('admin') ? true : false);
                 return res;
             })
         }
@@ -33,10 +33,6 @@ export default {
     }
 
 };
-
-function cToText(bool){
-    return bool ? 'admin' : 'student';
-}
 
 </script>
 <style lang="scss" scoped>

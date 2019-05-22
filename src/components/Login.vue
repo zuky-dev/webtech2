@@ -21,7 +21,7 @@ export default {
             let data = response.data;
             if(data.conn){
                 $cookies.set('id', data.id);
-                $cookies.set('id', data.iddb);
+                $cookies.set('iddb', data.iddb);
                 $cookies.set('admin', data.admin);
                 $cookies.set('name', data.name);
                 $cookies.set('surname', data.surname);
