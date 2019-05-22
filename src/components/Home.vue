@@ -1,11 +1,5 @@
 <template>
-    <div>
-        <div v-if="false">
-        </div>
-        <div v-else>
-            <!-- login -->
-        </div>
-    </div>
+    <iframe src="http://147.175.121.210:8166/sources/rozdelenieUloh.php" frameborder="0"></iframe>
 </template>
 <script>
 </script>
