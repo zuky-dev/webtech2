@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 21, 2019 at 01:22 AM
+-- Generation Time: May 22, 2019 at 06:57 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.15-0ubuntu0.18.04.1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `uloha2`
+-- Database: `Uloha2`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,9 @@ INSERT INTO `student` (`id_student`, `name`, `email`, `password`, `ais_id`) VALU
 (139, 'Holecova Silvia', 'xholecova@is.stuba.sk', 'NULL', 7955),
 (140, 'Mrkvicka Jano', 'xmrkvicka@is.stuba.sk', 'adbgh', 7985),
 (141, 'Kovacova Jana', 'xkovacova@is.stuba.sk', 'NULL', 8955),
-(142, 'Lences Tomas', 'xlences@is.stuba.sk', 'dfg', 8755);
+(142, 'Lences Tomas', 'xlences@is.stuba.sk', 'dfg', 8755),
+(143, 'Student test', 'xstudent@is.stuba.sk', 'student', 9999),
+(144, 'Admin test', 'xadmin@is.stuba.sk', 'admin', 9998);
 
 -- --------------------------------------------------------
 
@@ -66,11 +68,32 @@ INSERT INTO `studentTeam` (`id_studentTeam`, `student_id`, `team_id`, `pointsStu
 (164, 139, 98, 10, NULL),
 (165, 140, 98, 10, NULL),
 (166, 141, 99, NULL, 1),
-(167, 142, 100, NULL, NULL),
+(167, 142, 100, NULL, 0),
 (168, 139, 101, 20, 1),
-(169, 140, 101, 10, NULL),
+(169, 140, 101, 11, NULL),
 (170, 141, 102, NULL, NULL),
-(171, 142, 103, NULL, NULL);
+(171, 142, 103, NULL, NULL),
+(172, 139, 103, 15, 1),
+(173, 140, 103, 14, NULL),
+(174, 141, 103, 45, NULL),
+(175, 142, 103, NULL, NULL),
+(176, 139, 103, 15, 1),
+(177, 140, 103, 14, NULL),
+(178, 141, 103, 45, NULL),
+(179, 142, 103, NULL, NULL),
+(180, 139, 103, 15, 1),
+(181, 140, 103, 14, NULL),
+(182, 141, 103, 45, NULL),
+(183, 142, 103, NULL, NULL),
+(184, 139, 103, 15, 1),
+(185, 140, 103, 14, NULL),
+(186, 141, 103, 45, NULL),
+(187, 142, 103, NULL, NULL),
+(188, 139, 103, 15, 1),
+(189, 140, 103, 14, NULL),
+(190, 141, 103, 45, NULL),
+(191, 142, 103, NULL, NULL),
+(192, 143, 103, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -93,7 +116,18 @@ INSERT INTO `subjects` (`id_subject`, `subject_name`, `years`) VALUES
 (41, 'VSA', '2018/2019'),
 (42, '', '2018/2019'),
 (43, '', '2018/2019'),
-(44, '', '2018/2019');
+(44, '', '2018/2019'),
+(45, 'VSA', '2016/2017'),
+(46, 'VSA', '2017/2018'),
+(47, 'VSA', '2018/2019'),
+(48, 'VSA', '2015/2016'),
+(49, '', '2018/2019'),
+(50, '', '2018/2019'),
+(51, 'Webove Technologie', '2017/2018'),
+(52, '', '2018/2019'),
+(53, '', '2018/2019'),
+(54, '', '2018/2019'),
+(55, '', '2018/2019');
 
 -- --------------------------------------------------------
 
@@ -114,12 +148,12 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id_team`, `numberTeam`, `subject_id`, `pointsTeam`, `confirmAdmin`) VALUES
-(98, 11, 40, 20, NULL),
+(98, 11, 40, 40, 1),
 (99, 14, 40, NULL, 0),
 (100, 1, 40, NULL, 1),
 (101, 11, 41, 21, 0),
-(102, 14, 41, NULL, NULL),
-(103, 1, 41, NULL, NULL);
+(102, 14, 41, NULL, 0),
+(103, 1, 41, 44, 0);
 
 --
 -- Indexes for dumped tables
@@ -160,17 +194,17 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id_student` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `id_student` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 --
 -- AUTO_INCREMENT for table `studentTeam`
 --
 ALTER TABLE `studentTeam`
-  MODIFY `id_studentTeam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `id_studentTeam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 --
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id_subject` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_subject` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `teams`
 --

@@ -1,7 +1,7 @@
 <?php
 
 require_once './vendor/autoload.php';
-require_once './assets/php/config.php';
+require_once './assets/php/configR.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 

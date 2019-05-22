@@ -3,7 +3,7 @@
 <head>
     <title>Rozdelenie úloh</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styl.css">
 
 </head>
 
@@ -17,6 +17,7 @@
             <th rowspan="2">Uloha3</th>
             <th rowspan="2">Login</th>
             <th rowspan="2">Prepojenie stránok</th>
+	    <th rowspan="2">Git</th>
             <th rowspan="2">Checklist</th>
         </tr>
         <tr>
@@ -36,6 +37,7 @@
             <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
+            <td class="tabulka"></td>
         </tr>
         <tr>
             <th class="prvy" id="blue">Silvia Holecová</th>
@@ -43,6 +45,7 @@
             <td class="tabulka"></td>
             <td class="tabulka">&#9745</td>
             <td class="tabulka">&#9745</td>
+            <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
@@ -57,6 +60,7 @@
             <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
+	    <td class="tabulka"></td>
             <td class="tabulka">&#9745</td>
         </tr>
         <tr>
@@ -66,6 +70,7 @@
             <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka">&#9745</td>
+            <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
             <td class="tabulka"></td>
@@ -79,9 +84,13 @@
             <td class="tabulka"></td>
             <td class="tabulka">&#9745</td>
             <td class="tabulka">&#9745</td>
+	    <td class="tabulka">&#9745</td>
             <td class="tabulka"></td>
         </tr>
 
     </table>
+    <br>
+    <br>
+    <a href="dokumentacia.pdf">Dokumentacia</a>
 </body>
 </html>

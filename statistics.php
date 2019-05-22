@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
          <!-- Numeric JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     
     </head>  
      <body>   

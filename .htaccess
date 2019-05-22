@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule api/(.*)$ php/rest.php
-RewriteRule (.*)$ index.html
+RewriteRule e1 index.html
+RewriteRule e2 index.html
+RewriteRule e3 index.html
 </IfModule>
